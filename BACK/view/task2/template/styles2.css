@@ -1,0 +1,231 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #228B22;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid #116A11;
+    transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #116A11;
+    padding-left: 25px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    transition: margin-left 0.3s;
+}
+
+.content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.farm-options {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.farm-options button {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.farm-options button:hover {
+    background-color: #116A11;
+    transform: scale(1.05);
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+form table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+form table tr {
+    margin-bottom: 10px;
+}
+
+form table td {
+    padding: 10px;
+}
+
+form table label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form table input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+form table input[type="text"]:focus {
+    border-color: #228B22;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+form table input[type="submit"],
+form table input[type="reset"] {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form table input[type="submit"]:hover,
+form table input[type="reset"]:hover {
+    background-color: #116A11;
+    transform: scale(1.05);
+}
+
+#error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Styles pour les tables de liste des zones */
+.new-zone-table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.new-zone-table th, .new-zone-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.new-zone-table th {
+    background-color: #228B22;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Styles pour les formulaires de modification et de suppression */
+.modify-form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    background-color: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.modify-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.modify-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.modify-form input[type="text"]:focus {
+    border-color: #228B22;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.modify-form input[type="submit"] {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.modify-form input[type="submit"]:hover {
+    background-color: #116A11;
+    transform: scale(1.05);
+}
+
+/* Styles pour centrer le formulaire de suppression */
+.modify-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

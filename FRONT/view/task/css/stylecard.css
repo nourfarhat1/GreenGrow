@@ -1,0 +1,47 @@
+.air-quality-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-air-quality, .card-explanation {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+    flex: 1;
+}
+
+.progress-bar-air-quality {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, green, yellow, orange, red);
+    border-radius: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.progress-pointer {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 30px;
+    background: black;
+    border-radius: 5px;
+}
+
+.card-explanation {
+    max-width: 400px;
+}
+
+.card-explanation h3 {
+    margin-bottom: 10px;
+}
+
+.card-explanation p {
+    margin: 5px 0;
+}

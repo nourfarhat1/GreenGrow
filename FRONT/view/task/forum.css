@@ -1,0 +1,262 @@
+/* Styles de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.crud-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Réduction de l'espace entre les boutons */
+    margin-bottom: 20px;
+}
+
+.crud-buttons button {
+    background-color: #e8f5e9; /* Couleur de fond claire (vert pâle) */
+    color: #388e3c;           /* Couleur de texte (vert foncé) */
+    border: 1px solid #c8e6c9; /* Bordure verte claire */
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effets de transition */
+}
+
+body {
+    background-image: url('uploads/bg.jpg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* Ajuste l'image pour couvrir toute la page */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.crud-buttons button:hover {
+    background-color: #a5d6a7; /* Couleur au survol */
+    border-color: #81c784;
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
+
+/* Section principale */
+.write-section, .forum-section {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.forum-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Style des publications */
+.post {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.post img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    display: block;
+}
+
+.chart-container canvas {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    width: 400px;
+}
+
+button {
+    background-color: #e8f5e9; /* Couleur par défaut (vert pâle) */
+    color: #388e3c;
+    padding: 10px 15px;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #a5d6a7;
+    border-color: #81c784;
+    transform: scale(1.05);
+}
+
+/* Style pour le message d'erreur */
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Navigation des catégories */
+.categories-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.categories-nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.categories-nav a:hover {
+    background-color: #2e8b57;
+    color: #fff;
+    border-color: #2e8b57;
+}
+
+/* Formulaire de question */
+form {
+    margin-bottom: 20px;
+}
+
+form textarea, form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Style pour la zone de recherche */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centre la barre de recherche horizontalement */
+    margin: 0 0 20px 150px; /* Réduction de la marge inférieure à 20px et maintien du décalage à gauche */
+    width: 700px; /* Largeur fixe de la zone */
+}
+
+/* Style pour l'input de recherche */
+.search-container input[type="text"] {
+    width: 250%; /* Garde la largeur à 250% par rapport à 100% */
+    max-width: 700px; /* Limite la largeur maximale à 700px */
+    padding: 12px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style du bouton de recherche */
+.search-container button {
+    width: 250%; /* Garde la largeur du bouton à 250% */
+    max-width: 700px; /* Limite la largeur maximale du bouton à 700px */
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+/* Réduction de la largeur de la zone de recherche et du bouton sur petits écrans */
+@media (max-width: 768px) {
+    .search-container input[type="text"],
+    .search-container button {
+        width: 100%; /* Sur petits écrans, occupe toute la largeur disponible */
+    }
+
+    .search-container button {
+        padding: 10px 15px; /* Ajuste le padding pour les petits écrans */
+    }
+}
+
+/* Style pour les boutons "Afficher les questions" et "Masquer les questions" */
+#toggleQuestionsButton {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    background-color: #e8f5e9; /* Couleur par défaut (vert pâle) */
+    color: #388e3c;
+    padding: 10px 15px;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggleQuestionsButton:hover {
+    background-color: #a5d6a7;
+    border-color: #81c784;
+    transform: scale(1.05);
+}
+
+/* Style pour les boutons "Modifier" et "Supprimer la réponse" */
+.action-button {
+    background-color: #e8f5e9; /* Couleur par défaut (vert pâle) */
+    color: #388e3c;
+    padding: 10px 15px;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+.action-button:hover {
+    background-color: #a5d6a7;
+    border-color: #81c784;
+    transform: scale(1.05);
+}
+

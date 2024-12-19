@@ -1,0 +1,160 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le : mer. 18 déc. 2024 à 03:06
+-- Version du serveur : 10.4.32-MariaDB
+-- Version de PHP : 8.1.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `projet`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE `user` (
+  `Username` varchar(20) NOT NULL,
+  `Mdp` varchar(20) NOT NULL,
+  `Nom` varchar(10) NOT NULL,
+  `Prenom` varchar(10) NOT NULL,
+  `E_mail` varchar(50) NOT NULL,
+  `Adresse` varchar(20) NOT NULL,
+  `Tel` int(8) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `image` varchar(100) NOT NULL DEFAULT 'C:\\Users\\MSI\\Downloads\\image.JPEG',
+  `user_type` varchar(20) NOT NULL DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `user`
+--
+
+INSERT INTO `user` (`Username`, `Mdp`, `Nom`, `Prenom`, `E_mail`, `Adresse`, `Tel`, `created_at`, `image`, `user_type`) VALUES
+('azza', 'azza2005', 'mira', 'azza', 'azza.CHOUIKH@esprit.tn', 'ezzahhra', 1223446, '2024-11-11 00:58:46', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'Expert'),
+('boutheina', 'azerty', 'chouikh', 'azza', 'azza_chouikh@yahoo.com', 'azfzfzz', 1233344, '2024-12-17 22:42:08', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'Expert'),
+('fzzf', 'azza2003', 'azza', 'chouikh', 'chouikh_azza@yahoo.com', 'little palace', 1223345, '2024-12-11 00:58:46', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'admin'),
+('mariem', 'mariem2003', 'elloumi', 'mariem', 'azza_chouikh@yahoo.com', 'ariena', 23355112, '2024-10-17 22:57:58', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'user'),
+('mister', 'salami2004', 'gg', 'gg', 'azza_chouikh@yahoo.com', 'ii', 34434668, '2024-11-18 00:24:57', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'user'),
+('salami', 'salami2003', 'azza', 'lilou', 'azza_chouikh@yahoo.com', 'azzzzzz', 12233, '2024-12-17 19:36:25', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'user'),
+('scrupy', 'azza2003', 'starkov', 'lilou', 'azza_chouikh@yahoo.com', 'little palace', 12334661, '2024-12-11 00:58:46', 'C:\\Users\\MSI\\Downloads\\image.JPEG', 'user');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`Username`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1
+-- Généré le : mer. 18 déc. 2024 à 03:06
+-- Version du serveur : 10.4.32-MariaDB
+-- Version de PHP : 8.1.25
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de données : `projet`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `task_history`
+--
+
+CREATE TABLE `task_history` (
+  `id` int(11) NOT NULL,
+  `task_date` date NOT NULL,
+  `task_name` varchar(255) NOT NULL,
+  `task_status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `task_history`
+--
+
+INSERT INTO `task_history` (`id`, `task_date`, `task_name`, `task_status`) VALUES
+(1, '2024-12-06', 'feed azza', 'completed'),
+(2, '2024-12-15', 'check the cows', 'pending'),
+(3, '2025-01-01', 'check the chickens', 'completed'),
+(4, '2024-12-13', 'kk', 'completed'),
+(5, '2024-12-31', 'check the chickens', 'completed');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `task_history`
+--
+ALTER TABLE `task_history`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `task_history`
+--
+ALTER TABLE `task_history`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

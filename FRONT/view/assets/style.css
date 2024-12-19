@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form, table {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+a, button {
+    padding: 8px 12px;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+a:hover, button:hover {
+    background-color: #45a049;
+}
+/* Style pour les boutons */
+button, a.btn {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    
+}
+
+
+a.btn-primary {
+    background-color: #4CAF50;
+}
+
+a.btn-danger {
+    background-color: red;
+}
